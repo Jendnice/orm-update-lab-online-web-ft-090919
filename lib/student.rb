@@ -49,9 +49,8 @@ class Student
   end 
   
   def self.create(name:, grade:)
-    sql = <<-SQL 
-     
-    SQL
+    new_student = Student.new(name, grade)
+    
   end 
   
   def self.new_from_db(row)
