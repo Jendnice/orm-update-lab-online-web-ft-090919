@@ -11,7 +11,7 @@ class Student
   def initialize(id = nil, name, grade)
     @name = name 
     @grade = grade 
-    @id = id 
+ #   @id = id 
   end 
   
   def self.create_table 
@@ -54,11 +54,11 @@ class Student
     student 
   end 
   
-  def self.new_from_db(id, name, grade)
-    student = Student.new(id, name, grade)
-  #  student.id = row[0]
- #   student.name = row[1]
-  #  student.grade = row[2]
+  def self.new_from_db(row)
+    student = self.new
+    student.id = row[0]
+    student.name = row[1]
+    student.grade = row[2]
   end
   
   def self.find_by_name
