@@ -61,7 +61,13 @@ class Student
     student.grade = row[2]
   end
   
-  def self.find_by_name
+  def self.find_by_name(name)
+    sql = <<-SQL
+     SELECT * 
+     FROM students
+     WHERE name = ?
+     LIMIT 1
+    SQL
   end 
     
   def update 
