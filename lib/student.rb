@@ -49,6 +49,9 @@ class Student
   end 
   
   def self.create 
+    sql = <<-SQL 
+     
+    SQL
   end 
   
   def self.new_from_db(row)
