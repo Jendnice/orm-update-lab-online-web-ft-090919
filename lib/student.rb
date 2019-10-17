@@ -54,11 +54,11 @@ class Student
     student 
   end 
   
-  def self.new_from_db(id, name, grade)
+  def self.new_from_db(id)
     new_student = self.new
     new_student.id = id
-    new_student.name = name
-    new_student.grade = grade
+  #  new_student.name = name
+   # new_student.grade = grade
     new_student
   end 
   
