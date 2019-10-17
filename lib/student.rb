@@ -34,11 +34,12 @@ class Student
     DB[:conn].execute(sql)
   end 
   
-  def save(row)
-    new_student = self.new
-    new_student.id = row[0]
-    new_student.name = row[1]
-    new_student.grade = row[2]
+  def save
+    sql = <<-SQL
+     INSERT 
+    
+    SQL
+  
   end 
 
 end
